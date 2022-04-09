@@ -101,7 +101,7 @@ footer {
 }
 
 /* Creamos el GRID básico con el método MOBILE FIRST */
-.main {
+main {
     display: grid;
     justify-content: space-evenly;
     grid-template-areas:
@@ -111,10 +111,10 @@ footer {
         "footer";
 }
 
-/* Cambiamos algunas cosas para las resoluciones >599 */
-@media(min-width: 600px) {
+/* Cambiamos algunas cosas para las resoluciones >767 */
+@media(min-width: 768px) {
     /* Hacemos que tenga 2 columnas y ordenamos el contenido y modificamos algunas otras cosas */
-    .main {
+    main {
         display: grid;
         justify-content: center;
         grid-column: 1fr 1fr;
@@ -134,16 +134,23 @@ footer {
         margin: 0;
         padding: 0;
     }
+    
+    nav ul li {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 
     footer {
         padding: 2rem;
     }
 }
 
-/* Cambiamos algunas cosas para las resoluciones >899px */
-@media(min-width: 900px) {
+/* Cambiamos algunas cosas para las resoluciones >1023 */
+@media(min-width: 1024px) {
     /* Hacemos que tenga 3 columnas y ordenamos el contenido y modificamos algunas otras cosas */
-    .main {
+    main {
         display: grid;
         justify-content: center;
         grid-column: 1fr 1fr 1fr;
@@ -164,12 +171,5 @@ footer {
         height: 300px;
         padding: 10px;
         object-fit: cover;
-    }
-    
-    nav ul li {
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-        justify-content: space-between;
     }
 }
