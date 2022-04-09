@@ -42,14 +42,15 @@ nav ul li {
     padding: 10px;
 }
 
+/* Hacemos que se mueva 5px a la derecha los items de la lista */
+nav ul li:hover {
+    transition: all 0.5s ease;
+    transform:  translateX(5px)
+}
+
 /* Hacemos que la imagen ocupe el 100% de la pantalla */
 img {
     width: 100%;
-}
-
-/* Hacemos que la imagen se decore un poco cuando pasamos el mouse sobre él */
-img:hover {
-    box-shadow: 0 0.1rem 0.4rem #A6A6A6;
 }
 
 /* Le removemos el subrayado y le damos color */
@@ -171,5 +172,12 @@ main {
         height: 300px;
         padding: 10px;
         object-fit: cover;
+    }
+
+    /* Hacemos que las imagenes se agranden un poco cuando se pase el mouse sobre el mismo */
+    img:hover {
+        transform: scale(1.05);
+        transition-property: all;
+        transition-duration: 0.5s;
     }
 }
