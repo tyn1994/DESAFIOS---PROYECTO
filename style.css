@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Le asignamos la fuente a todo el documento HTML */
+html {
+    font-family: 'Fredoka', sans-serif;
+}
+
+/* Le asignamos un color de fondo y usamos alineación por FLEX */
+body {
+    background-color: #262626;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Centramos el texto, le damos fondo, color más otros ajustes y le asignamos el nombre del grid-area */
+header {
+    background-color: #0D0D0D;
+    color: white;
+    padding: 1rem;
+    grid-area: header;
+}
+
+/* Fondo y color de texto, además, le asignamos el nombre del grid-area */
+nav {
+    background-color: #0D0D0D;
+    color: white;
+    grid-area: nav;
+}
+
+/* Le removemos los puntos (ul) del listado */
+nav ul {
+    list-style: none;
+}
+
+/* Le asignamos un tamaño y un padding al item del listado */
+nav ul li {
+    font-size: 18px;
+    padding: 10px;
+}
+
+/* Hacemos que la imagen ocupe el 100% de la pantalla */
+img {
+    width: 100%;
+}
+
+/* Hacemos que la imagen se decore un poco cuando pasamos el mouse sobre él */
+img:hover {
+    box-shadow: 0 0.1rem 0.4rem #A6A6A6;
+}
+
+/* Le removemos el subrayado y le damos color */
+a {
+    text-decoration: none;
+    color: #404040;
+}
+
+/* Le ponemos un tamaño al P, le damos color y lo alineamos justificadamente */
+p {
+    font-size: 18px;
+    color: #A6A6A6;
+    text-align: justify;
+}
+
+/* clase padding */
+.padding {
+    padding: 10px;
+}
+
+/* clase margin */
+.margin {
+    margin: 10px;
+}
+
+/* clase center (para alinear el contenido de texto) */
+.center {
+    text-align: center;
+}
+
+/* Le asignamos el nombre del grid-area */
+section {
+    grid-area: section;
+}
+
+/* Hacemos que estos elementos tengan padding y color de texto */
+section h2, section ol, section ul, form {
+    padding: 5px;
+    color: #A6A6A6;
+}
+
+/*  Decoramos el footer a nuestro modo y le asignamos el nombre del grid-area*/
+footer {
+    padding: 1rem;
+    background-color: #0D0D0D;
+    bottom: 0;
+    margin-top: auto;
+    grid-area: footer;
+}
+
+/* Creamos el GRID básico con el método MOBILE FIRST */
+.main {
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-areas:
+        "header"
+        "nav"
+        "section"
+        "footer";
+}
+
+/* Cambiamos algunas cosas para las resoluciones >599 */
+@media(min-width: 600px) {
+    /* Hacemos que tenga 2 columnas y ordenamos el contenido y modificamos algunas otras cosas */
+    .main {
+        display: grid;
+        justify-content: center;
+        grid-column: 1fr 1fr;
+        grid-template-areas:
+            "nav header"
+            "nav section"
+            "footer footer";
+    }
+
+    /*  */
+    header {
+        padding: 2rem;
+        text-align: start;
+    }
+
+    img {
+        margin: 0;
+        padding: 0;
+    }
+
+    footer {
+        padding: 2rem;
+    }
+}
+
+/* Cambiamos algunas cosas para las resoluciones >899px */
+@media(min-width: 900px) {
+    /* Hacemos que tenga 3 columnas y ordenamos el contenido y modificamos algunas otras cosas */
+    .main {
+        display: grid;
+        justify-content: center;
+        grid-column: 1fr 1fr 1fr;
+        grid-template-areas:
+            "nav header header"
+            "nav section section"
+            "footer footer footer";
+    }
+
+    section {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    img {
+        width: 300px;
+        height: 300px;
+        padding: 10px;
+        object-fit: cover;
+    }
+    
+    nav ul li {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
