@@ -19,8 +19,6 @@ body {
 /* Centramos el texto, le damos fondo, color más otros ajustes y le asignamos el nombre del grid-area */
 header {
     background-color: #0D0D0D;
-    color: white;
-    padding: 1rem;
     grid-area: header;
 }
 
@@ -28,7 +26,6 @@ header {
 nav {
     background-color: #0D0D0D;
     color: white;
-    grid-area: nav;
 }
 
 /* Le removemos los puntos (ul) del listado */
@@ -76,11 +73,6 @@ p {
     margin: 10px;
 }
 
-/* clase center (para alinear el contenido de texto) */
-.center {
-    text-align: center;
-}
-
 /* Le asignamos el nombre del grid-area */
 section {
     grid-area: section;
@@ -107,77 +99,12 @@ main {
     justify-content: space-evenly;
     grid-template-areas:
         "header"
-        "nav"
         "section"
         "footer";
 }
 
-/* Cambiamos algunas cosas para las resoluciones >767 */
-@media(min-width: 768px) {
-    /* Hacemos que tenga 2 columnas y ordenamos el contenido y modificamos algunas otras cosas */
-    main {
-        display: grid;
-        justify-content: center;
-        grid-column: 1fr 1fr;
-        grid-template-areas:
-            "nav header"
-            "nav section"
-            "footer footer";
-    }
-
-    /*  */
-    header {
-        padding: 2rem;
-        text-align: start;
-    }
-
-    img {
-        margin: 0;
-        padding: 0;
-    }
-    
-    nav ul li {
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    footer {
-        padding: 2rem;
-    }
-}
-
-/* Cambiamos algunas cosas para las resoluciones >1023 */
-@media(min-width: 1024px) {
-    /* Hacemos que tenga 3 columnas y ordenamos el contenido y modificamos algunas otras cosas */
-    main {
-        display: grid;
-        justify-content: center;
-        grid-column: 1fr 1fr 1fr;
-        grid-template-areas:
-            "nav header header"
-            "nav section section"
-            "footer footer footer";
-    }
-
-    section {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
-    img {
-        width: 300px;
-        height: 300px;
-        padding: 10px;
-        object-fit: cover;
-    }
-
-    /* Hacemos que las imagenes se agranden un poco cuando se pase el mouse sobre el mismo */
-    img:hover {
-        transform: scale(1.05);
-        transition-property: all;
-        transition-duration: 0.5s;
-    }
+img:hover {
+    transform: scale(1.05);
+    transition-property: all;
+    transition-duration: 0.5s;
 }
