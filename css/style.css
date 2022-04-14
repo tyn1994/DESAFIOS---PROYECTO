@@ -63,16 +63,6 @@ p {
     text-align: justify;
 }
 
-/* clase padding */
-.padding {
-    padding: 10px;
-}
-
-/* clase margin */
-.margin {
-    margin: 10px;
-}
-
 /* Le asignamos el nombre del grid-area */
 section {
     grid-area: section;
