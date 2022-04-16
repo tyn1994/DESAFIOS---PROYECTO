@@ -3,34 +3,10 @@
     padding: 0;
 }
 
-/* Le asignamos la fuente a todo el documento HTML */
-html {
-    font-family: 'Fredoka', sans-serif;
-}
-
-/* Le asignamos un color de fondo y usamos alineación por FLEX */
+/* Le asignamos un color de fondo */
 body {
     background-color: #262626;
-    display: flex;
-    flex-direction: column;
     min-height: 100vh;
-}
-
-/* Centramos el texto, le damos fondo, color más otros ajustes y le asignamos el nombre del grid-area */
-header {
-    background-color: #0D0D0D;
-    grid-area: header;
-}
-
-/* Fondo y color de texto, además, le asignamos el nombre del grid-area */
-nav {
-    background-color: #0D0D0D;
-    color: white;
-}
-
-/* Le removemos los puntos (ul) del listado */
-nav ul {
-    list-style: none;
 }
 
 /* Le asignamos un tamaño y un padding al item del listado */
@@ -45,15 +21,9 @@ nav ul li:hover {
     transform:  translateX(5px)
 }
 
-/* Hacemos que la imagen ocupe el 100% de la pantalla */
+/* Hacemos que la imagen ocupe el 100% de la pantalla/div */
 img {
-    width: 100%;
-}
-
-/* Le removemos el subrayado y le damos color */
-a {
-    text-decoration: none;
-    color: #404040;
+    height: 300px;
 }
 
 /* Le ponemos un tamaño al P, le damos color y lo alineamos justificadamente */
@@ -63,36 +33,15 @@ p {
     text-align: justify;
 }
 
-/* Le asignamos el nombre del grid-area */
-section {
-    grid-area: section;
-}
-
-/* Hacemos que estos elementos tengan padding y color de texto */
-section h2, section ol, section ul, form {
-    padding: 5px;
-    color: #A6A6A6;
-}
-
-/*  Decoramos el footer a nuestro modo y le asignamos el nombre del grid-area*/
+/*  Decoramos el footer a nuestro modo */
 footer {
     padding: 1rem;
     background-color: #0D0D0D;
     bottom: 0;
     margin-top: auto;
-    grid-area: footer;
 }
 
-/* Creamos el GRID básico con el método MOBILE FIRST */
-main {
-    display: grid;
-    justify-content: space-evenly;
-    grid-template-areas:
-        "header"
-        "section"
-        "footer";
-}
-
+/* Hacemos que haga algo cuando le hacemos hover a alguna imagen */
 img:hover {
     transform: scale(1.05);
     transition-property: all;
