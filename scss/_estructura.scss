@@ -1,0 +1,54 @@
+/*
+Página de estructura
+*/
+
+@import "colores";
+
+/* Le asignamos un color de fondo */
+body {
+    background-color: $colorSecundario;
+    min-height: 100vh;
+}
+
+/* Le asignamos un tamaño y un padding al item del listado */
+nav {
+    ul {
+        li {
+            font-size: 18px;
+            padding: 10px;
+            
+            /* Hacemos que se mueva 5px a la derecha los items de la lista */
+            &:hover {
+                transition: all 0.5s ease;
+                transform:  translateX(5px)
+            }
+        }
+    }
+}
+
+/* Hacemos que la imagen ocupe el 100% de la pantalla/div */
+img {
+    height: 300px;
+
+    /* Hacemos que haga algo cuando le hacemos hover a alguna imagen */
+    &:hover {
+        transform: scale(1.05);
+        transition-property: all;
+        transition-duration: 0.5s;
+    }
+}
+
+/* Le ponemos un tamaño al P, le damos color y lo alineamos justificadamente */
+p {
+    font-size: 18px;
+    color: $colorTerciario;
+    text-align: justify;
+}
+
+/*  Decoramos el footer a nuestro modo */
+footer {
+    padding: 1rem;
+    background-color: $colorPrimario;
+    bottom: 0;
+    margin-top: auto;
+}

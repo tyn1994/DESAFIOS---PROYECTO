@@ -1,49 +1,59 @@
+@charset "UTF-8";
+/*
+Página de reseteo
+*/
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
+/*
+Página de estructura
+*/
+/*
+Página de colores
+*/
 /* Le asignamos un color de fondo */
 body {
-    background-color: #262626;
-    min-height: 100vh;
+  background-color: #262626;
+  min-height: 100vh;
 }
 
 /* Le asignamos un tamaño y un padding al item del listado */
 nav ul li {
-    font-size: 18px;
-    padding: 10px;
+  font-size: 18px;
+  padding: 10px;
+  /* Hacemos que se mueva 5px a la derecha los items de la lista */
 }
-
-/* Hacemos que se mueva 5px a la derecha los items de la lista */
 nav ul li:hover {
-    transition: all 0.5s ease;
-    transform:  translateX(5px)
+  transition: all 0.5s ease;
+  transform: translateX(5px);
 }
 
 /* Hacemos que la imagen ocupe el 100% de la pantalla/div */
 img {
-    height: 300px;
+  height: 300px;
+  /* Hacemos que haga algo cuando le hacemos hover a alguna imagen */
+}
+img:hover {
+  transform: scale(1.05);
+  transition-property: all;
+  transition-duration: 0.5s;
 }
 
 /* Le ponemos un tamaño al P, le damos color y lo alineamos justificadamente */
 p {
-    font-size: 18px;
-    color: #A6A6A6;
-    text-align: justify;
+  font-size: 18px;
+  color: #A6A6A6;
+  text-align: justify;
 }
 
 /*  Decoramos el footer a nuestro modo */
 footer {
-    padding: 1rem;
-    background-color: #0D0D0D;
-    bottom: 0;
-    margin-top: auto;
+  padding: 1rem;
+  background-color: #0D0D0D;
+  bottom: 0;
+  margin-top: auto;
 }
 
-/* Hacemos que haga algo cuando le hacemos hover a alguna imagen */
-img:hover {
-    transform: scale(1.05);
-    transition-property: all;
-    transition-duration: 0.5s;
-}
+/*# sourceMappingURL=style.css.map */
