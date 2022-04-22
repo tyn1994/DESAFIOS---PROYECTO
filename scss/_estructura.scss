@@ -2,8 +2,6 @@
 Página de estructura
 */
 
-@import "colores";
-
 /* Le asignamos un color de fondo */
 body {
     background-color: $colorSecundario;
@@ -29,6 +27,8 @@ nav {
 /* Hacemos que la imagen ocupe el 100% de la pantalla/div */
 img {
     height: 300px;
+    width: 100%;
+    object-fit: cover;
 
     /* Hacemos que haga algo cuando le hacemos hover a alguna imagen */
     &:hover {
@@ -36,6 +36,11 @@ img {
         transition-property: all;
         transition-duration: 0.5s;
     }
+}
+
+.imgFull {
+    height: 500px;
+    width: 500px;
 }
 
 /* Le ponemos un tamaño al P, le damos color y lo alineamos justificadamente */

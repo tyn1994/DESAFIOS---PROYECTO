@@ -8,10 +8,10 @@ Página de reseteo
 }
 
 /*
-Página de estructura
+Página de colores
 */
 /*
-Página de colores
+Página de estructura
 */
 /* Le asignamos un color de fondo */
 body {
@@ -33,12 +33,19 @@ nav ul li:hover {
 /* Hacemos que la imagen ocupe el 100% de la pantalla/div */
 img {
   height: 300px;
+  width: 100%;
+  object-fit: cover;
   /* Hacemos que haga algo cuando le hacemos hover a alguna imagen */
 }
 img:hover {
   transform: scale(1.05);
   transition-property: all;
   transition-duration: 0.5s;
+}
+
+.imgFull {
+  height: 500px;
+  width: 500px;
 }
 
 /* Le ponemos un tamaño al P, le damos color y lo alineamos justificadamente */
