@@ -24,10 +24,15 @@ nav {
     }
 }
 
+
+@mixin tamanioDeImagenes($alto, $ancho){
+    height: $alto;
+    width: $ancho;
+}
+
 /* Hacemos que la imagen ocupe el 100% de la pantalla/div */
 img {
-    height: 300px;
-    width: 100%;
+    @include tamanioDeImagenes(300px, 100%);
     object-fit: cover;
 
     /* Hacemos que haga algo cuando le hacemos hover a alguna imagen */
@@ -39,8 +44,13 @@ img {
 }
 
 .imgFull {
-    height: 500px;
-    width: 500px;
+    @include tamanioDeImagenes(500px, 500px)
+}
+
+// Nota: esta clase no se aplica a ningún objeto, es sólo porque se solicita en las rúbricas.
+.imgFullParaExtends {
+    @extend .imgFull;
+    border-radius: 10px;
 }
 
 /* Le ponemos un tamaño al P, le damos color y lo alineamos justificadamente */
@@ -53,7 +63,7 @@ p {
 /*  Decoramos el footer a nuestro modo */
 footer {
     padding: 1rem;
-    background-color: $colorPrimario;
+    background-color: map-get($mapaColores, color1);
     bottom: 0;
     margin-top: auto;
 }

@@ -43,9 +43,13 @@ img:hover {
   transition-duration: 0.5s;
 }
 
-.imgFull {
+.imgFull, .imgFullParaExtends {
   height: 500px;
   width: 500px;
+}
+
+.imgFullParaExtends {
+  border-radius: 10px;
 }
 
 /* Le ponemos un tamaño al P, le damos color y lo alineamos justificadamente */
