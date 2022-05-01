@@ -10,6 +10,25 @@ Página de reseteo
 /*
 Página de colores
 */
+.color-twitter, .color-youtube {
+  fill: #00acee;
+  margin: 5px;
+}
+
+.color-facebook {
+  fill: #3b5998;
+  margin: 5px;
+}
+
+.color-instagram {
+  fill: #C13584;
+  margin: 5px;
+}
+
+.color-youtube {
+  fill: #c4302b;
+}
+
 /*
 Página de estructura
 */

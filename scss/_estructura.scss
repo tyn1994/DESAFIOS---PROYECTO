@@ -63,7 +63,8 @@ p {
 /*  Decoramos el footer a nuestro modo */
 footer {
     padding: 1rem;
-    background-color: map-get($mapaColores, color1);
+    background-color: $colorPrimario;
     bottom: 0;
     margin-top: auto;
 }
+
