@@ -1,0 +1,10 @@
+/*
+MEDIAS
+*/
+
+@media (max-width: 500px) {
+    .imgFull {
+        @include tamanioDeImagenes(300px, 100%);
+        object-fit: cover;
+    }
+}
